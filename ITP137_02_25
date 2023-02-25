@@ -1,0 +1,35 @@
+//----------------------------
+//This is 0225 class
+//var year = 2022
+//print(year)
+//var courseCode = 0
+//print(type(of: courseCode))
+//print (courseCode)
+//var temp=0.0
+//temp=Double(readLine()!)!
+//print(type(of: temp))
+//print(temp)
+//var numOne = Int(readLine()!)!
+//var numTwo = Int(readLine()!)!
+//var sum = numOne+numTwo
+//print(sum)
+//print("The sum of two numbers are "+String(sum))
+//print("The sum of two numbers are \(sum)")
+//var numThree = Int(readLine()!)!
+//var numFour = Int(readLine()!)!
+//var div = Double(numThree)/Double(numFour)
+//print("The division of two numbers are \(div)")
+//var numFive = Int(readLine()!)!
+//var numSix = Int(readLine()!)!
+//var mod = numThree%numFour
+//print("The remainder of two numbers are \(mod)")
+//var numSeven = Int(readLine()!)!
+//if numSeven % 2 == 0 {
+ // print(String(numSeven)+" is even")}// else{print(String(numSeven)+" is odd")}
+//var numEight = 0
+//while numEight < 10 {print(numEight)numEight+=1}
+var numNine = Int(readLine()!)!
+while numNine > 0 {
+  print(numNine)
+  numNine /= 2
+}
