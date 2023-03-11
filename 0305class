@@ -1,0 +1,90 @@
+print ("Enter a string of characters:")
+var test_string=readLine()!
+let the highest_count=0
+let the highest_char:Character="-"
+test_string.forEach { char in
+    print("character = \(char)")
+}
+
+
+func mostFrequentCharacter(_ input: String) -> Character? {
+    var charCounts = [Character: Int]()
+    
+    for char in input {
+        charCounts[char, default: 0] += 1
+    }
+    
+    var maxCount = 0
+    var mostFrequentChar: Character?
+    
+    for (char, count) in charCounts {
+        if count > maxCount {
+            maxCount = count
+            mostFrequentChar = char
+        }
+    }
+    
+    return mostFrequentChar
+}
+print(mostFrequentChar)
+
+print ("Enter a string of characters:")
+var test_string=readLine()!
+let the highest_count=0
+let the highest_char:Character="-"
+test_string.forEach { char in
+    print("character = \(char)")
+}
+
+
+func mostFrequentCharacter(_ input: String) -> Character? {
+    var charCounts = [Character: Int]()
+    
+    for char in input {
+        charCounts[char, default: 0] += 1
+    }
+    
+    var maxCount = 0
+    var mostFrequentChar: Character?
+    
+    for (char, count) in charCounts {
+        if count > maxCount {
+            maxCount = count
+            mostFrequentChar = char
+        }
+    }
+    
+    return mostFrequentChar
+}
+print(mostFrequentChar)
+
+print ("Enter a string of characters:")
+var test_string=readLine()!
+let the highest_count=0
+let the highest_char:Character="-"
+test_string.forEach { char in
+    print("character = \(char)")
+}
+
+
+func mostFrequentCharacter(_ input: String) -> Character? {
+    var charCounts = [Character: Int]()
+    
+    for char in input {
+        charCounts[char, default: 0] += 1
+    }
+    
+    var maxCount = 0
+    var mostFrequentChar: Character?
+    
+    for (char, count) in charCounts {
+        if count > maxCount {
+            maxCount = count
+            mostFrequentChar = char
+        }
+    }
+    
+    return mostFrequentChar
+}
+print(mostFrequentChar)
+

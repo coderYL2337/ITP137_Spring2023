@@ -135,12 +135,121 @@ import Glibc
  // print(String(numSeven)+" is even")}// else{print(String(numSeven)+" is odd")}
 //var numEight = 0
 //while numEight < 10 {print(numEight)numEight+=1}
-var numNine = Int(readLine()!)!
-while numNine > 0 {
-  print(numNine)
-  numNine /= 2
+//var numNine = Int(readLine()!)!
+//while numNine > 0 {
+  //print(numNine)
+ // numNine /= 2
+//}
+//import Foundation
+//import Glibc
+//print ("Enter a string of characters:")
+//var test_string=readLine()!
+//var high_count=0
+//var high_char:Character="_"
+//test_string.forEach { char in
+    //let test_index = char
+    //var test_count=0
+    //test_string.forEach{
+      //test_char in
+      //if test_index==test_char{
+        //test_count+=1
+      //}
+    //}
+
+  //if test_count>high_count{
+   // high_count=test_count
+    //high_char=char
+ // }
+                  //  }
+//print("\n",high_char, high_count)
+                     
+    //print("character = \(char)")
+//for num in stride(from:3, to:0, by:-1){
+ // print(num)
+//}
+//print("Go!")
+
+/*print("Enter a string of characters:")
+var test_string = readLine()!
+var high_count = 0
+var high_char = test_string.first // Set to first character in string
+
+test_string.forEach { char in
+    let test_index = char
+    var test_count = 0
+    test_string.forEach { test_char in
+        if test_index == test_char {
+            test_count += 1
+        }
+    }
+
+    if test_count > high_count {
+        high_count = test_count
+        high_char = char
+    }
+    
+    print("character = \(char)") // Moved inside forEach loop
+}
+
+print("\n\(high_char!) \(high_count)")
+*/
+
+
+/*print("Please enter a string") 
+if let input = readLine() { 
+     if let charValue = mostFrequentCharacter(input){ 
+            print("The most frequent character is " + String(charValue))
+        } 
+      }
+else { 
+print ("error try again") 
+} 
+
+func mostFrequentCharacter(_ input: String) -> Character? { 
+        var maxCount = 0 
+        var maxChar: Character? 
+        for char in input { 
+                var count = 0 
+                 for otherChar in input {  
+                         if otherChar == char { 
+                               count+=1 
+                            } 
+                       } 
+          if count > maxCount { 
+              maxChar = char 
+              maxCount = count 
+             } 
+           } 
+return maxChar 
+}
+*/
+
+print("Please enter a string") 
+if let input = readLine() { 
+     if let charValue = mostFrequentCharacter(input){ 
+       let frequency = input.filter { $0 == charValue }.count
+        print("The most frequent character is '\(charValue)' with a frequency of \(frequency).")
+    }  else {
+    print("Error: could not read input.")
+}
 }
   
 
-   
+func mostFrequentCharacter(_ input: String) -> Character? { 
+        var maxCount = 0 
+        var maxChar: Character? 
+        for char in input { 
+                var count = 0 
+                 for otherChar in input {  
+                         if otherChar == char { 
+                               count+=1 
+                            } 
+                       } 
+          if count > maxCount { 
+              maxChar = char 
+              maxCount = count 
+             } 
+           } 
+return maxChar 
+}
 
