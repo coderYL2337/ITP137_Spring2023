@@ -1,0 +1,36 @@
+//https://www.codecademy.com/courses/learn-swift/lessons/swift-conditionals/exercises/if-statement
+//https://stackoverflow.com/questions/41766665/is-it-possible-to-run-a-single-swift-file-main-within-xcode
+
+/* o run a single file in Xcode, you can follow these steps:
+
+Open your Xcode project.
+Click on the "Project navigator" (the first icon on the left-hand side of the Xcode window).
+Find the file you want to run in the list of files and click on it to select it.
+Press the "Play" button in the top left-hand corner of the Xcode window (or press Command + R on your keyboard).
+Xcode will then compile and run the selected file.
+Note that this will only work if the file you want to run is a standalone file with a main function. If the file is part of a larger project, you'll need to run the entire project in order to test the changes you've made to the file.
+To run a Swift file in Xcode, you can follow these steps:
+
+Open the Swift file in Xcode by either creating a new playground or opening an existing project and selecting the Swift file.
+In the top left-hand corner of the Xcode window, click the "Play" button (or press Command + R on your keyboard).
+Xcode will then compile and run the Swift file.
+If the Swift file contains a main function, the output will be displayed in the console area at the bottom of the Xcode window.
+If the Swift file is part of a larger project, you'll need to run the entire project in order to test the changes you've made to the file.
+Nathan W to Everyone (Mar 11, 2023, 10:09 AM)
+https://stackoverflow.com/questions/64237074/how-to-write-simple-xcode-swift-program-without-a-ui
+Rahel Dawit to Everyone (Mar 11, 2023, 10:10 AM)
+Need to fix the executable, it happens after renaming project.
+
+Product > Scheme > Edit scheme..
+
+Select
+
+Run > Info 
+*/
+
+import Foundation
+import Glibc
+let firstName:String
+print("Please input your first name")
+firstName=readLine()!
+print("Your name is \(firstName)")

@@ -224,7 +224,7 @@ return maxChar
 }
 */
 
-print("Please enter a string") 
+/*print("Please enter a string") 
 if let input = readLine() { 
      if let charValue = mostFrequentCharacter(input){ 
        let frequency = input.filter { $0 == charValue }.count
@@ -251,5 +251,28 @@ func mostFrequentCharacter(_ input: String) -> Character? {
              } 
            } 
 return maxChar 
+}
+*/
+
+/*let firstName:String
+print("Please input your first name")
+firstName=readLine()!
+print("Your name is \(firstName)")
+*/
+var wholeNumber=Int.random(in:10...20)
+
+print(wholeNumber)
+
+switch wholeNumber {
+  case let x where x % 2 == 0:
+    print("Composite")
+  case let x where x % 3 == 0:
+    print("Composite")
+  case let x where x % 5 == 0:
+    print("Composite")
+  case let x where x % 7 == 0:
+    print("Composite")
+  default:
+    print("Prime")
 }
 

@@ -1,0 +1,163 @@
+/* English=en
+   Spanish=esp
+   Chinese=ch
+   Russian=ru*/
+/*var abbreviation:String ="en"
+
+if abbreviation=="en"{
+  print("English")
+} else if abbreviation=="esp"{
+  print("Spanish")
+} else if abbreviation=="ch"{
+  print("Chinese")
+} else if abbreviation=="ru"{
+  print("Russian")
+} else{
+  print("Not found")
+}
+
+windy? print("Sail up"): print("Motor on")
+*/
+/*condition ? expression1 : expression2*/
+// program to check pass or fail
+/*let marks = 60
+
+// use of ternary operator
+let result = (marks >= 40) ? "pass" : "fail"
+
+print("You " + result + " the exam")*/
+
+/*// check the number is positive or negative
+let num = 15
+var result = ""
+
+if (num > 0) {
+     result = "Positive Number"
+}
+else {
+     result = "Negative Number"
+}
+
+print(result)
+*/
+// ternary operator to check the number is positive or negative
+
+/*let num = 15
+
+let result = (num > 0) ? "Positive Number" : "Negative Number"
+print(result)
+*/
+
+
+/*program to check if a number is positive, zero, or negative
+let num = 7
+
+let result = (num == 0) ? "Zero" : ((num > 0) ? "Positive" : "Negative")
+
+print("The number is \(result).")
+*/
+
+/*var windy=true
+windy ? print("Sail up"): print("Motor on")
+*/
+
+/*JavaScript:
+javascript
+Copy code
+let age = 18;
+let isAdult = age >= 18 ? true : false;
+console.log(isAdult); // Output: true
+Python:
+python
+Copy code
+age = 18
+is_adult = True if age >= 18 else False
+print(is_adult) # Output: True
+Java:
+arduino
+Copy code
+int age = 18;
+boolean isAdult = (age >= 18) ? true : false;
+System.out.println(isAdult); // Output: true
+C#:
+arduino
+Copy code
+int age = 18;
+bool isAdult = age >= 18 ? true : false;
+Console.WriteLine(isAdult); // Output: true
+PHP:
+bash
+Copy code
+$age = 18;
+$isAdult = $age >= 18 ? true : false;
+echo $isAdult ? 'true' : 'false'; // Output: true
+*/
+/*var planet = "Earth"
+switch planet {
+  case "Earth", "Mercury","Venus","Mars":
+  print("Terristrial Planet")
+  case "Saturn","Jupiter","Uranus","Neptune":
+  print("Jovian Planet")
+  default: 
+  print("unknown planet")
+}
+*/
+/*var randomNumber = Int random(in.0...10)
+for _ in 1...3 {
+    print(Int.random(in: 1..<100))
+}
+*/
+
+/*Example:
+
+Following the variable declaration is a standard switch statement that checks the value of randomNumber:
+
+switch randomNumber {
+  case let x where x % 2 == 0:
+    print("\(randomNumber) is even")
+  case let x where x % 2 == 1:
+    print("\(randomNumber) is odd")
+  default:
+    print("Invalid")
+}
+*/
+
+// Prints: 7 is odd
+/*Problem:
+1. In Numbers.swift, we’ll set up a program that determines if a number between 10 and 20 is primeLinks to an external site. or compositeLinks to an external site..
+Below the wholeNumber variable, set up a switch statement that accepts wholeNumber as its expression. Keep the body of the switch statement empty for now.
+
+Note: You will see an error in the terminal on the right, but it will go away in the next step when we add case statements!
+
+2. Within the code block of the switch statement, set up the following cases:
+Case 1: Declare the temporary variable x and use the where clause to check if the value is divisible by 2. Print, "Composite".
+
+Case 2: Declare the temporary variable x and use the where clause to check if the value is divisible by 3. Print, "Composite".
+
+The default statement should print, "Prime".
+
+3. Awesome work! This step is optional so feel free to hit Run if you’d like to skip it and move on to the next the exercise.
+Challenge:
+
+Instead of manually assigning and testing different values for wholeNumber, we can use .random() to generate one for us.
+
+Set up the .random() method to accept a range of Integers between 10 and 20. Assign this calculation to wholeNumber.
+
+Use a print() statement below the variable to output the value of wholeNumber.
+*/
+
+var wholeNumber=Int.random(in:10...20)
+print(wholeNumber)
+
+switch wholeNumber {
+  case let x where x % 2 == 0:
+    print("Composite")
+  case let x where x % 3 == 0:
+    print("Composite")
+  case let x where x % 5 == 0:
+    print("Composite")
+  case let x where x % 7 == 0:
+    print("Composite")
+  default:
+    print("Prime")
+}
