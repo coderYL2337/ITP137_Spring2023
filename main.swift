@@ -268,10 +268,6 @@ switch wholeNumber {
     print("Composite")
   case let x where x % 3 == 0:
     print("Composite")
-  case let x where x % 5 == 0:
-    print("Composite")
-  case let x where x % 7 == 0:
-    print("Composite")
   default:
     print("Prime")
 }
