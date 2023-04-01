@@ -259,7 +259,7 @@ print("Please input your first name")
 firstName=readLine()!
 print("Your name is \(firstName)")
 */
-var wholeNumber=Int.random(in:10...20)
+/*var wholeNumber=Int.random(in:10...20)
 
 print(wholeNumber)
 
@@ -270,5 +270,168 @@ switch wholeNumber {
     print("Composite")
   default:
     print("Prime")
+}*/
+/*
+--------------------------------
+04/01/23
+*/
+/*var quote = "Our life is solving puzzels."
+for num in quote {
+print(num)
+if num=="z" {
+print("There is a z!")
 }
+}*/
 
+/*var funFact = "Elephantxxx xxxelphant"
+for char in funFact 
+{
+if (char != "x" ){
+print (char)
+}
+}
+*/
+
+
+/*for _ in 1...15 
+{
+  print ("Don't forget to buy eggs from the market!")
+}
+*/
+/*for num in 1...9 {
+if num % 2 == 0
+{print(num)}
+else
+  {continue}
+}
+*/
+
+/*for num in 1...9 
+{
+   if num % 2 == 1 {
+      continue}
+  print (num)  
+}
+*/
+
+/*var guessedNum = Int.random(in: 1...15)
+for counter in 1...15 {
+print("Is it \(counter)?")
+if counter == guessedNum {print ("It's \(guessedNum)!!")
+break}
+}
+*/
+
+/*var guess = Int.random(in: 1...10)
+var magicNum = Int.random(in: 1...10)
+
+
+while guess != magicNum 
+{
+  print("You guessed \(guess), and the number was \(magicNum).")
+    guess = Int.random(in: 1...10)
+    magicNum = Int.random(in: 1...10)
+}
+  
+print("You got it! You guessed \(guess), and the number was \(magicNum).")
+*/
+
+/*for num in 1...100{
+  if num % 2 == 0 {print("\(num) is even")}
+  else { print("\(num) is odd")}
+}
+*/
+
+
+/*for num in 1...100 {
+  if (num % 2 == 0)
+  { print("\(num) is not a prime number")}
+  else if (num != 3) && (num % 3 == 0)
+  { print("\(num) is not a prime number")}
+  else if ( !(num==5) ) && (num % 5 == 0)
+  { print("\(num) is not a prime number")}
+  else if (!(num == 7)) && (num % 7 == 0) 
+  { print("\(num) is not a prime number")}
+  else { print("\(num) is a prime number")}
+}
+*/
+/*print("Please enter a word")
+let myStr:String = readLine()!
+var totalCount = 0
+for _ in myStr {
+  totalCount = totalCount + 1
+}
+print("\(myStr) has \(totalCount) characters in it.")
+*/
+
+/*
+
+var myStr: String
+repeat {
+    print("Please enter a word")
+    myStr = readLine() ?? ""
+} while myStr.isEmpty
+
+let totalCount = myStr.count
+print("\(myStr) has \(totalCount) characters in it.")
+
+
+for i in 1...4
+{
+  for _ in 1...i 
+  {
+    print("*", terminator: "")
+  }
+print()
+
+}
+*/
+
+//In-class assignment : Loops 040123
+print("challenge 1")
+print("----------------------------------")
+for num in 1...100{
+  if num % 2 == 0 {print("\(num) is even")}
+  else { print("\(num) is odd")}
+}
+print("----------------------------------")
+print()
+
+print("challenge 2")
+print("----------------------------------")
+for num in 1...100 {
+  if (num % 2 == 0)
+  { print("\(num) is not a prime number")}
+  else if (num != 3) && (num % 3 == 0)
+  { print("\(num) is not a prime number")}
+  else if ( !(num==5) ) && (num % 5 == 0)
+  { print("\(num) is not a prime number")}
+  else if (!(num == 7)) && (num % 7 == 0) 
+  { print("\(num) is not a prime number")}
+  else { print("\(num) is a prime number")}
+}
+print("----------------------------------")
+print()
+
+print("challenge 3")
+print("----------------------------------")
+print("Please enter a word")
+let myStr:String = readLine()!
+var totalCount = 0
+for _ in myStr {
+  totalCount = totalCount + 1
+}
+print("\(myStr) has \(totalCount) characters in it.")
+print("----------------------------------")
+print()
+
+print("challenge 4")
+print("----------------------------------")
+for i in 1...4
+{
+  for _ in 1...i 
+  {
+    print("*", terminator: "")
+  }
+print()
+}

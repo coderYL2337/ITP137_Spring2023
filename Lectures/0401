@@ -1,0 +1,78 @@
+for age in 1...35 {
+print("Are you \(age)?")
+}
+
+for num in stride (from: 0, to: 6, by: 2) {
+print(num)
+} 
+
+for num in stride(from: 3, to: 0, by: -1) {
+  print(num)
+}
+
+var quote= "Our life is solving puzzels."
+for character in quote {
+print(character)
+if character=="z"
+print("There is a z!")
+}
+
+var funFact = "Elephantxxx xxxelphant"
+for char in funFact {
+print(char)
+}
+
+for num in 1...9{
+if num%2=0
+{print(num)}
+else 
+   continue
+}
+
+/*var funFact = "Elephantxxx xxxelphant"
+for char in funFact 
+{
+if (char!="x") {
+print (char)
+}
+}
+
+for _ in 1...15 
+{
+  print ("Don't forget to buy eggs from the market!")
+}
+*/
+/*for num in 1...9 {
+if num % 2 == 0
+{print(num)}
+else
+  {continue}
+}
+*/
+
+for num in 1...9 
+{
+   if num % 2 == 1 {
+      continue}
+  print (num)  
+}
+
+var guessedNum = Int.random(in: 1...15)
+for counter in 1...15 {
+print("Is it (counter)?")
+if counter == guessedNum {print ("It's \(guessedNum)!!")
+break}
+}
+
+var guess = Int.random(in: 1...10)
+var magicNum = Int.random(in: 1...10)
+
+
+while guess != magicNum 
+{
+  print("You guessed \(guess), and the number was \(magicNum).")
+    guess = Int.random(in: 1...10)
+    magicNum = Int.random(in: 1...10)
+}
+  
+print("You got it! You guessed \(guess), and the number was \(magicNum).")
