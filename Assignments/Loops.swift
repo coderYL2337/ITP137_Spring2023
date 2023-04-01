@@ -1,4 +1,6 @@
 //In-class assignment : Loops 040123
+import Foundation
+import Glibc
 print("challenge 1")
 print("----------------------------------")
 for num in 1...100{
