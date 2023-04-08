@@ -388,6 +388,8 @@ print()
 */
 
 //In-class assignment : Loops 040123
+
+/*
 print("challenge 1")
 print("----------------------------------")
 for num in 1...100{
@@ -400,7 +402,9 @@ print()
 print("challenge 2")
 print("----------------------------------")
 for num in 1...100 {
-  if (num % 2 == 0)
+  if(num == 1)
+  {print("\(num) is not a prime number")}
+  if (num != 2) && (num % 2 == 0)
   { print("\(num) is not a prime number")}
   else if (num != 3) && (num % 3 == 0)
   { print("\(num) is not a prime number")}
@@ -410,6 +414,338 @@ for num in 1...100 {
   { print("\(num) is not a prime number")}
   else { print("\(num) is a prime number")}
 }
+print("----------------------------------")
+print()
+
+print("challenge 3")
+print("----------------------------------")
+print("Please enter a word")
+let myStr:String = readLine()!
+var totalCount = 0
+for _ in myStr {
+  totalCount = totalCount + 1
+}
+print("\(myStr) has \(totalCount) characters in it.")
+print("----------------------------------")
+print()
+
+print("challenge 4")
+print("----------------------------------")
+for i in 1...4
+{
+  for _ in 1...i 
+  {
+    print("*", terminator: "")
+  }
+print()
+}
+*/
+
+//----------------------------
+//0408
+/*var location: [Double] = [40.7245, -73.9979]
+var subwayAdult:[Int]=[800,1200,1500]
+print(subwayAdult)
+var subwayChild:[Int]=[400,600,800]
+print(subwayChild)
+
+var temperature : [Int] = [66,68,67,72,76,78,82,80,73,69,60]
+print(temperature[0])
+*/
+
+//var countingRhyme = ["Ennie","Cat","miny","moe"]
+//print(countingRhyme.count)
+/*var resolutions = ["Play more music", "Read more books","Drink more water"]
+resolutions.append("Work out more")
+print(resolutions)
+
+resolutions += ["Get a dog"]
+print(resolutions)
+*/
+
+/*var receipt = [12.00, 13.00, 9.00, 8.15]
+var total: Double = 0.0
+for item in receipt {
+total = total + item
+}
+total*=1.0887
+print(total)
+*/
+
+
+/*var arrNum = [2, 4, 3, 6, 1, 9]
+var sumEven = 0
+var prodOdd = 1
+
+for item in arrNum {
+  if item % 2 == 0 {
+    print("Even: \(item)")
+  } else {
+    print("Odd: \(item)")
+  }
+  
+}
+//print(sumEven)
+//print(prodOdd)
+print{"Sum of even numbers is \(sumEven)"}
+print{"Product of odd numbers is \(prodOdd)"}
+*/
+/*var arrNum = [2, 4, 3, 6, 1, 9]
+var sumEven = 0
+var prodOdd = 1
+ 
+for item in arrNum {
+  if item % 2 == 0 {
+    sumEven += item
+  } else {
+    prodOdd *= item
+  }
+}
+ 
+print("Sum of even is \(sumEven)")
+print("Product of odd is \(prodOdd)")
+*/
+
+/*var consonants = Set <Character> ()
+var vowels : Set = ["a","e","i","o","u"]
+print(vowels)
+*/
+
+/*setName.count
+setName.isEmpty
+setName.insert(NewValue)
+*/
+/*setName.insert(NewValue)
+setName.remove(Value)
+setName.removeAll()
+
+setName.contains(Value)
+
+var coffeeFlavors : Set = ["Blueberry","Camel","Chocolate"]
+if coffeeFalvors.contains("Blueberry"){
+  print("Blueberry coming up")
+}
+else
+   print("No such coffee")
+
+var bothHemispheres = northHemisphere.intersection(southHemisphere)
+*/
+
+/*var swim: Set = ["duck","fish","turtle"]
+var fly: Set = ["duck","bat","butterfly"]
+var swimAndFly = Set<String>()
+print(swimAndFly)
+var swimAndFly2 = swim.intersection(fly)
+print(swimAndFly2)
+
+var NewSet = SetA.union(SetB)
+var NewSet = SetA.symmetricDifference(SetB)
+var newSet = SetA.subtracting(SetB)
+
+Great job completing this lesson!
+
+Let’s go over what we learned:
+
+A set is an unordered collection of unique elements.
+
+We have the option to initialize sets that are either empty or populated:
+
+var emptySet = Set<Type>()
+var populatedSet: Set = [Value1, Value2, Value3]
+To add new elements to a set, use the built-in method, .insert(Value).
+
+We can remove a single element from a set using .remove(Value) or we can remove all the values from a set with .removeAll():
+
+If we want to check if a value exists within a set, we can use the method .contains(Value) .
+
+A for-in loop can be used to iterate through all the values of a set:
+
+for placeholder in setName {
+// Body of loop
+}
+We can use set operations to modify or create new sets based on the data in two different sets.
+
+The .intersection() operation creates sets with values that overlap in two sets:
+
+soda.intersection(seltzer)
+The .union() operation combines all the values of two different sets:
+
+ketchup.union(mayo)
+The operation .symmetricDifference() creates a set of items that appear in one set, but not both:
+
+capulets.symmetricDifference(montagues)
+.subtracting() is a set operation that removes the overlapping data of one set from another:
+
+milkshake.subtracting(iceCream)
+*/
+
+
+/*func isPrime(_ num: Int) -> Bool {
+    if num < 2 {
+        return false
+    }
+    if num == 2 || num == 3 {
+        return true
+    }
+    for i in 2...Int(sqrt(Double(num))) {
+        if num % i == 0 {
+            return false
+        }
+    }
+    return true
+}
+
+for num in 1...100 {
+    if isPrime(num) {
+        print("\(num) is a prime number")
+    } else {
+        print("\(num) is not a prime number")
+    }
+}
+
+for num in 1...100 {
+    if num == 1 {
+        print("\(num) is not a prime number")
+    } else if num == 2 || num == 3 || num == 5 || num == 7 {
+        print("\(num) is a prime number")
+    } else if num % 2 == 0 {
+        print("\(num) is not a prime number")
+    } else if num % 3 == 0 {
+        print("\(num) is not a prime number")
+    } else if num % 5 == 0 {
+        print("\(num) is not a prime number")
+    } else if num % 7 == 0 {
+        print("\(num) is not a prime number")
+    } else {
+        print("\(num) is a prime number")
+    }
+}
+*/
+
+
+/*func isPrime(_ num: Int) -> Bool {
+    if num < 2 {
+        return false
+    }
+    if num == 2 || num == 3 {
+        return true
+    }
+    for i in 2...Int(sqrt(Double(num))) {
+        if num % i == 0 {
+            return false
+        }
+    }
+    return true
+}
+print("Please enter a number")
+var num = Int(readLine())
+
+if isPrime(num) {
+    print("\(num) is a prime number")
+    } else {
+        print("\(num) is not a prime number")
+    }
+
+
+
+import Foundation
+
+func isPrime(_ num: Int) -> Bool {
+    if num < 2 {
+        return false
+    }
+    if num == 2 || num == 3 {
+        return true
+    }
+    for i in 2...Int(sqrt(Double(num))) {
+        if num % i == 0 {
+            return false
+        }
+    }
+    return true
+}
+
+print("Please enter a number:")
+if let input = readLine(), let num = Int(input) {
+    if isPrime(num) {
+        print("\(num) is a prime number")
+    } else {
+        print("\(num) is not a prime number")
+    }
+} else {
+    print("Invalid input. Please enter an integer.")
+}
+
+
+import Foundation
+
+func isPrime(_ num: Int) -> Bool {
+    if num < 2 {
+        return false
+    }
+    if num == 2 || num == 3 {
+        return true
+    }
+    for i in 2...Int(sqrt(Double(num))) {
+        if num % i == 0 {
+            return false
+        }
+    }
+    return true
+}
+
+print("Please enter a number:")
+if let input = readLine(), let num = Int(input) {
+    if isPrime(num) {
+        print("\(num) is a prime number")
+    } else {
+        print("\(num) is not a prime number")
+    }
+} else {
+    print("Invalid input. Please enter an integer.")
+}
+
+In this version, I've used optional binding (if let) to safely unwrap the result of readLine() and the Int() conversion. The code will only enter the if block when both readLine() and the integer conversion return non-nil values. If either of these values is nil, the code will print an error message.
+*/
+import Foundation
+import Glibc
+print("challenge 1")
+print("----------------------------------")
+for num in 1...100{
+  if num % 2 == 0 {print("\(num) is even")}
+  else { print("\(num) is odd")}
+}
+print("----------------------------------")
+print()
+
+print("challenge 2")
+print("----------------------------------")
+import Foundation
+
+print("Please enter a number:")
+if let input = readLine(), let num = Int(input) {
+    var prime = true
+    
+    if num < 2 {
+        prime = false
+    } else {
+        for i in 2...Int(sqrt(Double(num))) {
+            if num % i == 0 {
+                prime = false
+                break
+            }
+        }
+    }
+    
+    if prime {
+        print("\(num) is a prime number")
+    } else {
+        print("\(num) is not a prime number")
+    }
+} else {
+    print("Invalid input. Please enter an integer.")
+}
+
 print("----------------------------------")
 print()
 
