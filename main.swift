@@ -1,6 +1,15 @@
 
 //print("Hello,world!")
 //input
+//git push --set-upstream origin main
+/*This issue occurs when git is exited in the middle of doing some action. It creates an index.lock file in the .git folder of your project that prevents future commits.
+
+Can you try opening the shell (cmd/ctrl + "s" -> type "shell" ) and running rm .git/index.lock? I'm having trouble tracking down exactly what causes this. Have any of the following things possibly occurred?
+
+working with someone on this repl via multiplayer and trying to simultaneously commit
+closing the repl while a git action was still loading (the sidebar would be greyed out at that time)
+being forced to reconnect by us while using git (the editor will reload and show "offline" briefly, and then a reconnect message will appear)
+*/
 import Foundation
 import Glibc
 //print()
@@ -584,6 +593,8 @@ milkshake.subtracting(iceCream)
     if num < 2 {
         return false
     }
+
+
     if num == 2 || num == 3 {
         return true
     }
@@ -707,7 +718,7 @@ if let input = readLine(), let num = Int(input) {
 
 In this version, I've used optional binding (if let) to safely unwrap the result of readLine() and the Int() conversion. The code will only enter the if block when both readLine() and the integer conversion return non-nil values. If either of these values is nil, the code will print an error message.
 */
-import Foundation
+/*import Foundation
 import Glibc
 print("challenge 1")
 print("----------------------------------")
@@ -770,4 +781,31 @@ for i in 1...4
     print("*", terminator: "")
   }
 print()
+}
+*/
+/*var str = "C   11.01600        2.60800 18.68400 1.95 T"
+let s1 = str.componentsSeparatedByString(" ").filter{ $0 != ""}
+print(s1)
+*/
+
+//https://www.appypie.com/swift-palindromes
+
+
+func isPalindrome(_ input: String) -> Bool {
+    let lowercasedInput = input.lowercased()
+    let cleanedInput = lowercasedInput.components(separatedBy: CharacterSet.alphanumerics.inverted).joined()
+    let reversedInput = String(cleanedInput.reversed())
+    
+    return cleanedInput == reversedInput
+}
+
+print("Enter a word, number, or phrase to check if it's a palindrome:")
+if let input = readLine() {
+    if isPalindrome(input) {
+        print("'\(input)' is a palindrome.")
+    } else {
+        print("'\(input)' is not a palindrome.")
+    }
+} else {
+    print("Invalid input.")
 }
