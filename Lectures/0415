@@ -10,3 +10,25 @@ var fruitStand: [String:Int]=[
 var roleModels: [String:String] =[:]
 var movieYears =["Finding Nemo":2003,
                  "Toy Story":1995]
+
+var rainbowHex = [
+"red":"#ff000",
+"yellow":"#33000",
+"green":"#322445",
+"pink":"#223335",
+"brown":"#22266"
+]
+rainbowHex["red"]=nil
+rainbowHex.removeValue(forKey:"yellow")
+print(rainbowHex)
+
+var flowerNames = ["sunflower":"helianthus",
+                  "orchid":"orchidaceae",
+                  "dafadil":"nacissus",
+                  "lily":"lilium"]
+var sunflowerScientific = flowerNames ["sunflower"]!
+if let lilyflowerScientific = flowerNames["lily"]{
+  print("A lily is refered to as a \(lilyflowerScientific) in science community")}
+else{
+  print("We do not have such an element")
+}

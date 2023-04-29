@@ -1,0 +1,11 @@
+let optionalString: String? = "Hello, world!"
+
+if let unwrappedString = optionalString {
+    print("The unwrapped string is: \(unwrappedString)")
+} else {
+    print("The optional string is nil.")
+}
+/*In this example, optionalString is an optional String that may or may not have a value. Using if let, we create a new constant unwrappedString and assign it the non-nil value of optionalString if it exists. The code block inside the if let statement will only execute if optionalString has a non-nil value. If optionalString is nil, the code block inside the else statement will execute.
+
+This pattern helps you write safer and more predictable code by ensuring that you only access and work with non-nil values when working with optionals.
+*/

@@ -791,7 +791,7 @@ print(s1)
 //https://www.appypie.com/swift-palindromes
 
 
-func isPalindrome(_ input: String) -> Bool {
+/*func isPalindrome(_ input: String) -> Bool {
     let lowercasedInput = input.lowercased()
     let cleanedInput = lowercasedInput.components(separatedBy: CharacterSet.alphanumerics.inverted).joined()
     if cleanedInput.count < 2 {
@@ -809,4 +809,280 @@ if let input = readLine() {
     }
 } else {
     print("Invalid input.")
+}
+
+*/
+/*var rainbowHex = [
+"red":"#ff000",
+"yellow":"#33000",
+"green":"#322445",
+"pink":"#223335",
+"brown":"#22266"
+]
+rainbowHex["red"]=nil
+rainbowHex.removeValue(forKey:"yellow")
+print(rainbowHex)
+*/
+
+/*var flowerNames = ["sunflower":"helianthus",
+                  "orchid":"orchidaceae",
+                  "dafadil":"nacissus",
+                  "lily":"lilium"]
+var sunflowerScientific = flowerNames ["sunflower"]!
+if let lilyflowerScientific = flowerNames["lily"]{
+  print("A lily is refered to as a \(lilyflowerScientific) in science community")}
+else{
+  print("We do not have such an element")
+}
+*/
+/*
+let englishToMorseCode: [Character: String] = [
+    "A": ".-", "B": "-...", "C": "-.-.", "D": "-..", "E": ".", "F": "..-.",
+    "G": "--.", "H": "....", "I": "..", "J": ".---", "K": "-.-", "L": ".-..",
+    "M": "--", "N": "-.", "O": "---", "P": ".--.", "Q": "--.-", "R": ".-.",
+    "S": "...", "T": "-", "U": "..-", "V": "...-", "W": ".--", "X": "-..-",
+    "Y": "-.--", "Z": "--..", "1": ".----", "2": "..---", "3": "...--",
+    "4": "....-", "5": ".....", "6": "-....", "7": "--...", "8": "---..",
+    "9": "----.", "0": "-----"
+]
+
+let morseCodeToEnglish: [String: Character] = Dictionary(uniqueKeysWithValues: englishToMorseCode.map({ ($1, $0) }))
+/* englishToMorseCode.map({ ($1, $0) }):
+
+map() is a higher-order function that transforms an array, dictionary, or any other collection by applying a given function to each element and collecting the results in a new array or dictionary. In this case, we're applying map() to the englishToMorseCode dictionary.
+
+The closure { ($1, $0) } inside map() is a short way to define a function that takes two arguments: a key-value pair from the englishToMorseCode dictionary. $0 refers to the key (a Character) and $1 refers to the value (a String). By writing ($1, $0), we're swapping the key and the value, creating a new key-value pair with the Morse code as the key and the corresponding English character as the value.
+
+So, englishToMorseCode.map({ ($1, $0) }) creates an array of key-value pairs where each pair's key is a Morse code String and the value is the corresponding English Character. This array will be used to create the morseCodeToEnglish dictionary.
+
+Dictionary(uniqueKeysWithValues: englishToMorseCode.map({ ($1, $0) })):
+
+Dictionary(uniqueKeysWithValues:) is an initializer for creating a new dictionary given an array of key-value pairs. In our case, we're passing the array of key-value pairs created by englishToMorseCode.map({ ($1, $0) }). This initializer creates a dictionary where each Morse code String maps to its corresponding English Character.
+
+In summary, we're using map() to transform the englishToMorseCode dictionary by swapping its keys and values, creating an array of key-value pairs where Morse codes are keys and English characters are values. Then, we're using Dictionary(uniqueKeysWithValues:) to convert this array into the morseCodeToEnglish dictionary.
+
+
+The {} inside the map() function is used to define a closure. A closure is a self-contained, anonymous function that can be passed around and used in your code. It's a way to provide the transformation function that map() requires to apply to each element of the collection.
+
+The reason we have () inside the {} is to create a tuple. A tuple is a way to group multiple values into a single compound value. In this case, we're creating a tuple with two elements: ($1, $0). The $1 and $0 are shorthand argument names for the first and second arguments of the closure, respectively. In our code, $0 represents the key (English character) and $1 represents the value (Morse code) of each key-value pair in the englishToMorseCode dictionary.
+
+By writing ($1, $0) inside the closure, we're creating a new tuple that has its elements swapped compared to the original key-value pair from the dictionary. This new tuple has the Morse code as the first element and the English character as the second element. The closure then returns this new tuple as the result of the transformation applied to each key-value pair in the englishToMorseCode dictionary.
+*/
+
+/*The term uniqueKeysWithValues was not created by me is a part of Swift's standard library and is an initializer provided for the Dictionary type. This initializer creates a new dictionary from a sequence of key-value pairs.
+
+The role of uniqueKeysWithValues is to initialize a new dictionary with the given sequence of key-value pairs. It checks for unique keys and ensures that there are no duplicate keys in the resulting dictionary. If the sequence contains duplicate keys, a runtime error is triggered.
+
+In our code, we use uniqueKeysWithValues to initialize the morseCodeToEnglish dictionary with the key-value pairs generated by swapping the keys and values of the englishToMorseCode dictionary using the map() function:
+
+swift
+Copy code
+let morseCodeToEnglish: [String: Character] = Dictionary(uniqueKeysWithValues: englishToMorseCode.map({ ($1, $0) }))
+This code creates a new dictionary with the Morse code as the key and the corresponding English character as the value. It is essential for the decryption process when we convert Morse code back to English text.
+*/
+/*func encryptMessage(_ message: String) -> String {
+    let uppercaseMessage = message.uppercased()
+    var morseCodeMessage = ""
+
+    for character in uppercaseMessage {
+        if character == " " {
+            morseCodeMessage += "   " // 3 spaces between words
+        } else if let morseCode = englishToMorseCode[character] {
+            morseCodeMessage += morseCode + " " // 1 space between characters
+        }
+    }
+
+    return morseCodeMessage
+}
+func decryptMessage(_ morseCodeMessage: String) -> String {
+    let morseCodeWords = morseCodeMessage.split(separator: " ", maxSplits: .max, omittingEmptySubsequences: false)
+    var englishMessage = ""
+
+    for morseCode in morseCodeWords {
+        if morseCode.isEmpty {
+            englishMessage += " " // Add space between words
+        } else if let englishCharacter = morseCodeToEnglish[String(morseCode)] {
+            englishMessage += String(englishCharacter)
+        }
+    }
+
+    return englishMessage
+}
+let secretMessage = "HELLO WORLD"
+let encryptedMessage = encryptMessage(secretMessage)
+print("Encrypted message: \(encryptedMessage)")
+
+let decryptedMessage = decryptMessage(encryptedMessage)
+print("Decrypted message: \(decryptedMessage)")
+*/
+// File Name: Morse.swift
+// Author: Alex DiStasi
+// Purpose: Encode and decode morse code messages
+
+// Task Group: Setting Up
+var englishText = "this is a secret message"
+var secretMessage = ".... --- .-- -.. -.--   .--. .- .-. - -. . .-." 
+
+// Create a dictionary with letters as keys and morse code counterparts as values
+var lettersToMorse: [String: String] = [
+  "a": ".-",
+  "b": "-...",
+  "c": "-.-.",
+  "d": "-..",
+  "e": ".",
+  "f": "..-.",
+  "g": "--.",
+  "h": "....",
+  "i": "..",
+  "j": ".---",
+  "k": "-.-",
+  "l": ".-..",
+  "m": "--",
+  "n": "-.",
+  "o": "---",
+  "p": ".--.",
+  "q": "--.-",
+  "r": ".-.",
+  "s": "...",
+  "t": "-",
+  "u": "..-",
+  "v": "...-",
+  "w": ".--",
+  "x": "-..-",
+  "y": "-.--",
+  "z": "--..",
+  ".": ".-.-.-",
+  "!": "-.-.--",
+  "?": "..--..",
+  ",": "--..--"
+]
+
+
+// Encoding a Message
+// Empty string that will store a morse code message
+var morseText = ""
+
+// Loop through each character in englishText
+for element in englishText {
+  // Check if the value exists in the dictionary
+  if let morseChar = lettersToMorse["\(element)"]{
+    // Append the letter to morseText
+    // Append a space to morseText because each letter is separated by a single space in morse code.
+    morseText += morseChar + " "
+  }
+  else{
+    // Append 3 spaces to morseText because each word in a morse code message is separated by three spaces 
+    morseText+="  "
+  } 
+}
+print (morseText)
+
+
+// Decoding a Message
+var decodedMessage = ""
+var currMorse = ""
+// morseCodeArray will store individual morse code letters from secretMessage
+var morseCodeArray = [String]()
+
+// Loop through each character in secretMorse
+for char in secretMessage {
+  // Check if char is not a space
+  if char != " " {
+    // Append the value of char to currMorse
+    currMorse.append(char)
+  } 
+  
+  // If the value of char is a space character, the code in the else statement will be executed
+  else {
+    // Use a switch statement to assemble characters into individual morse code letters
+    switch currMorse {
+      case "": 
+        currMorse += " "
+      case " ":
+        // Append a space to morseCodeArray
+        morseCodeArray.append(" ")
+        currMorse = ""
+      default: 
+        // Append the morse code letter to the array  
+        morseCodeArray.append(currMorse)
+        // Reset the value of currMorse
+        currMorse = ""
+    }
+    
+  }
+}
+// Append the final value of currMorse to morseCodeArray
+morseCodeArray.append(currMorse)
+
+// Create an empty dictionary. This will hold morse code values as Keys and their english counter parts as Values
+var morseToLetter: [String: String] = [:]
+
+// Iterate through letterToMorse dictionary, add the keys as values and the values as keys to the morseToLetter dictionary
+for (letter,morseChar) in lettersToMorse{
+  morseToLetter[morseChar]=letter
+}
+
+// Go through each element in morseCodeArray and find the text value via the morseToLetter dictionary
+for morseValue in morseCodeArray {
+  // Check if the value exists in the morseToLetter dictionary
+  if let letterChar = morseToLetter[morseValue]{
+    //Append the values to decodedMessage
+    decodedMessage += letterChar
+  }
+  //if it's not in the dictionary, it's probably a space
+  else {
+    // Add a space to decodedMessage
+    decodedMessage += " "
+  }
+}
+print (decodedMessage)
+
+*/
+
+import Foundation
+import Glibc
+
+let rpsGame: Set = ["R", "P", "S"]
+
+print("Enter your choice: R for rock, P for paper, or S for scissors.")
+
+if let input = readLine() {
+    let result = whoWin(comChoice: rpsGame.randomElement()!, input: input)
+    print(result)
+} else {
+    print("Invalid input.")
+}
+
+func whoWin(comChoice: String, input: String) -> String {
+    let userChoice = input.uppercased()
+    let messageOne = "You and computer both chose \(userChoice). It's a draw!"
+    let messageTwo = "You chose \(userChoice) and Computer chose \(comChoice). Computer wins!"
+    let messageThree = "You chose \(userChoice) and Computer chose \(comChoice). You win!"
+    var finalMessage = ""
+
+    if userChoice == comChoice {
+        finalMessage = messageOne
+    } else if userChoice == "R" {
+        if comChoice == "P" {
+            finalMessage = messageTwo
+        } else {
+            finalMessage = messageThree
+        }
+    } else if userChoice == "P" {
+        if comChoice == "R" {
+            finalMessage = messageThree
+        } else {
+            finalMessage = messageTwo
+        }
+    } else if userChoice == "S" {
+        if comChoice == "R" {
+            finalMessage = messageTwo
+        } else {
+            finalMessage = messageThree
+        }
+    } else {
+        finalMessage = "Invalid input."
+    }
+
+    return finalMessage
 }
